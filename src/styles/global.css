@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-0: #050b2e;
+  --bg-1: #0a1655;
+  --bg-2: #0d2170;
+  --panel-bg: rgba(13, 34, 102, 0.45);
+  --panel-border: rgba(64, 156, 255, 0.35);
+  --panel-glow: rgba(40, 120, 255, 0.25);
+  --cyan: #38d6ff;
+  --cyan-soft: #6fe3ff;
+  --blue: #2f7bff;
+  --orange: #ff9a3c;
+  --red: #ff4d6d;
+  --green: #36e0a6;
+  --text: #eaf3ff;
+  --text-dim: #8fb4e8;
+  --text-mute: #5f7fc0;
+  --grad-cyan: linear-gradient(90deg, #1f6bff 0%, #38d6ff 100%);
+  --grad-orange: linear-gradient(90deg, #ff7a3c 0%, #ffb347 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #app { width: 100%; height: 100%; overflow: hidden; }
+
+body {
+  font-family: 'Rajdhani', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background:
+    radial-gradient(1200px 700px at 50% -10%, #14307f 0%, rgba(20,48,127,0) 60%),
+    radial-gradient(900px 600px at 0% 100%, #0c1e63 0%, rgba(12,30,99,0) 55%),
+    radial-gradient(900px 600px at 100% 100%, #0c1e63 0%, rgba(12,30,99,0) 55%),
+    linear-gradient(160deg, #061038 0%, #081a55 50%, #050b2e 100%);
+  color: var(--text);
+  letter-spacing: 0.4px;
+}
+
+/* dotted grid overlay for the HUD floor feel */
+body::after {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image: radial-gradient(rgba(80,150,255,0.10) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 65%, #000 0%, transparent 75%);
+}
+
+.font-num { font-family: 'Orbitron', 'Rajdhani', sans-serif; }
+
+.glow-cyan { text-shadow: 0 0 10px rgba(56,214,255,0.6); }
+.glow-orange { text-shadow: 0 0 10px rgba(255,154,60,0.6); }
+
+::-webkit-scrollbar { width: 0; height: 0; }
