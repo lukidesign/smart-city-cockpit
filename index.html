@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart City Cockpit</title>
+    <!-- Figma 捕获:仅当 URL 带 #figmacapture=... 时才加载 capture.js,正常访问 0 外部请求 -->
+    <script>
+      if (location.hash.includes('figmacapture')) {
+        var s = document.createElement('script');
+        s.src = 'https://mcp.figma.com/mcp/html-to-design/capture.js';
+        s.async = true;
+        document.head.appendChild(s);
+      }
+    </script>
   </head>
   <body>
     <div id="app"></div>
